@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+    config.vm.box = "hashicorp/precise32"
+    config.vm.define :mysql do |mysql_config|
+        mysql_config.vm.network "private_network", ip: "192.168.50.10"
+		mysql_config.vm.provision "puppet" do |puppet|
+            puppet.manifest_file = "mysql.pp"
+		end
+    end
+end
