@@ -13,12 +13,12 @@ public class EmailService {
 		
         try {
             Email email = new SimpleEmail();
-            email.setHostName("smtp.googlemail.com");
+            email.setHostName("smtp.gmail.com");
             email.setSmtpPort(465);
             email.setAuthenticator(new DefaultAuthenticator("sagacrbsuporte@gmail.com", "Rota2017"));
             email.setSSLOnConnect(true);
 
-            email.setFrom("email");
+            email.setFrom("sagacrbsuporte@gmail.com");
             email.setSubject("Você foi convidado pelo ListaVIP");
             email.setMsg("Olá " + nome + ". Você acaba de ser convidado pelo ListaVIP.");
             email.addTo(emailConvidado);

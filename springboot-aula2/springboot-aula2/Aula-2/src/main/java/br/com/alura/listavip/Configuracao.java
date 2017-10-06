@@ -28,6 +28,5 @@ public class Configuracao {
 		return dataSource;
 	}
 	
-	
 
 }
